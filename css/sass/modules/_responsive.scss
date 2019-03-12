@@ -21,13 +21,19 @@
 		.open{
 			display: block;
 		}
+		.masthead .open.color.change{
+			a{
+				color: #fff;
+			}
+		}
 		.masthead .open.color{
 			a{
 				color: #000;
 			}
 		}
 	.masthead.active{
-		background: #6ba5fc;
+		background: #222;
+		opacity: 0.9;
 	}
 	.masthead{
 		max-width: 460px;
@@ -36,7 +42,12 @@
 		padding: 10px 20px 0px;
 		background: none;
 		width: 100%;
+		.mobile-logo.show{
+			display: block;
+		}
+		
 		.mobile-logo{
+			display: none;
       			img{
 	      			height: 73px;
 	      			width: auto;
@@ -44,7 +55,11 @@
       			}
       		
     	}
-    	.logo_container .desktop-logo img {
+    	.logo_container .desktop-logo.active  {
+    		display: block;
+    	}
+
+    	.logo_container .desktop-logo.active.hide  {
 			display: none;
     	}
 
