@@ -1,0 +1,206 @@
+.clearfix, 
+.image-block, 
+.project-index .column-wrap {
+  *zoom: 1; }
+  .clearfix:before, 
+  .image-block:before, 
+  .column-wrap:before, 
+  .clearfix:after, 
+  .image-block:after, 
+  .column-wrap:after {
+    content: " ";
+    display: table; }
+  .clearfix:after, 
+  .image-block:after, 
+  .column-wrap:after {
+    clear: both; }
+
+
+.button-default{
+	text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    background: #b8bebd;
+    text-transform: uppercase;
+    color: #404140;
+    border-radius: 25px;
+    width: 118px;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+    letter-spacing: 0.04em;
+    font-family: $gudea_fs;
+}
+.open{
+    display: none;
+}
+.content-section .about-container .card-container.mobile{
+    display: none;
+}
+.guide.button-default{
+    top: 12px;
+    left: 78px;
+    padding:5px;
+    font-size: 11px;
+    margin-bottom: 30px;
+    font-family: $gudea_fs;
+}
+    
+body{
+    overflow-x:hidden;
+}
+.underline{
+		border-bottom: 2px solid #b2b2b2;
+		margin-top: 0px;
+		margin-bottom: 60px;
+}
+.underline.max-width{
+	max-width: 940px;
+	margin: 0px auto 40px;
+}
+.underline.thick{
+    margin-top: 0px;
+    border-top: 2px solid #b2b2b2;
+}
+
+.popin-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    font-family: $gudea_fs;
+    .popup-wrapper {
+        text-align: center;
+        background: #fff;
+        width: 85%;
+        margin: 0px auto;
+        max-width: 400px;
+        padding: 20px 20px 30px 20px;
+        border: 4px solid #8EC34A;
+        position: relative;
+        h3 {
+            font-size: 1.5em;
+        }
+        .close-btn {
+            top: 10px;
+            right: 5px;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            position: absolute;
+            span {
+                width: 15px;
+                height: 2px;
+                background: black;
+                display: block;
+                position: relative;
+                transform: rotate(45deg);
+                &:first-child {
+                    top: 2px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .wrap {
+        > p {
+            font-size: 0.9375em;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            span {
+                font-size: 10px;
+            }
+        }
+        > img {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 15px auto;
+        }
+        input {
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            margin: 10px auto;
+            height: 32px;
+            line-height: 26px;
+            padding: 3px 5px;
+        }
+        button {
+            height: 35px;
+            width: 150px;
+            color: #8EC34A;
+            border: 2px solid #8EC34A;
+            margin: 10px auto 25px;
+            cursor: pointer;
+            &:hover {
+                color: #fff;
+                background: #8EC34A;
+            }
+        }
+    }
+    .credit {
+        img {
+            display: block;
+            width: 60px;
+            height: auto;
+            margin: 15px auto 5px;
+        }
+        h5 {
+            font-family: $gudea_fs;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .popin-container {
+        .popup-wrapper {
+            h3 {
+                font-size: 1.25em;
+            }
+        }
+        .wrap {
+            > img {
+                margin: 10px auto;
+                max-width: 160px;
+            }
+            > p {
+                font-size: 0.75em;
+                margin-bottom: 10px;
+            }
+            input {
+                font-size: 0.75em;
+                height: 28px;
+                line-height: 22px;
+                margin: 5px auto;
+            }
+            button {
+                height: 30px;
+                width: 140px;
+                font-size: 0.85em;
+                margin-bottom: 10px;
+            }
+        }
+        .credit {
+            h5 {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 568px){
+    .popin-container {
+        .credit {
+            display: none;
+        }
+    }
+}

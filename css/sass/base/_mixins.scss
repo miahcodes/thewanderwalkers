@@ -1,0 +1,303 @@
+@mixin transition() {
+
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+
+}
+
+@mixin notransition() {
+
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+
+}
+
+@mixin transition2($sec) {
+
+	-webkit-transition: all $sec ease-in-out;
+	-moz-transition: all $sec ease-in-out;
+	-ms-transition: all $sec ease-in-out;
+	-o-transition: all $sec ease-in-out;
+	transition: all $sec ease-in-out;
+
+}
+
+@mixin transition3($sec) {
+
+	-webkit-transition: transform  $sec ease-in-out;
+	-moz-transition: transform  $sec ease-in-out;
+	-ms-transition: transform  $sec ease-in-out;
+	-o-transition: transform  $sec ease-in-out;
+	transition: transform  $sec ease-in-out;
+
+}
+
+@mixin transition4($e, $sec) {
+
+	-webkit-transition: $e  $sec ease-in-out;
+	-moz-transition: $e  $sec ease-in-out;
+	-ms-transition: $e  $sec ease-in-out;
+	-o-transition: $e  $sec ease-in-out;
+	transition: $e $sec ease-in-out;
+
+}
+
+// BORDER RADIUS
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	     -o-border-radius: $radius;
+		    border-radius: $radius;
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+          border-top-right-radius: $radius;
+   		   border-top-left-radius: $radius;
+  			      background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+          border-bottom-right-radius: $radius;
+   		   border-bottom-left-radius: $radius;
+   			         background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+   	      border-bottom-left-radius: $radius;
+     	     border-top-left-radius: $radius;
+     			    background-clip: padding-box;
+}
+
+
+@mixin text-shadow($size){
+	-webkit-text-shadow: 1px 1px $size #3c3636;
+	   -moz-text-shadow: 1px 1px $size #3c3636;
+		-ms-text-shadow: 1px 1px $size #3c3636;
+	     -o-text-shadow: 1px 1px $size #3c3636;
+		    text-shadow: 1px 1px $size #3c3636;
+
+}
+
+@mixin set-sprite-dimensions( $map, $name ) { 
+	 $file: sprite-file($map, $name);
+	 width: image-width( $file );
+	 height: image-height( $file );
+}
+
+
+// MEDIA QUERIRES BREAKPOINTS
+@mixin breakpoint_height($point) {
+	@if $point == 600 {
+		@media screen and ( max-height: 600px ){ @content; }
+	}
+	@else if $point == 480 {
+		@media screen and ( max-height: 480px ){ @content; }
+	}
+	@else if $point == 380 {
+		@media screen and ( max-height: 380px ){ @content; }
+	}
+	
+}
+
+@mixin breakpoint($point) {
+
+	@if $point == 1366 {
+		@media (max-width: 1366px) { @content; }
+	}
+	@if $point == 1370_min {
+		@media (min-width: 1370px) { @content; }
+	}
+	@else if $point == 1281_min {
+		@media (max-width: 1281px) { @content; }
+	}
+	@else if $point == 1350 {
+		@media (max-width: 1350px) { @content; }
+	}
+	@else if $point == 1300 {
+		@media (max-width: 1300px) { @content; }
+	}
+	@else if $point == 1280 {
+		@media (max-width: 1280px) { @content; }
+	}
+	@else if $point == 1224 {
+		@media (max-width: 1224px) { @content; }
+	}
+	@else if $point == 1224 {
+		@media (max-width: 1224px) { @content; }
+	}
+	@else if $point == 1200 {
+		@media (max-width: 1200px) { @content; }
+	}
+	@else if $point == 1115 {
+		@media (max-width: 1115px) { @content; }
+	}
+	@else if $point == 1025_min {
+		@media (min-width: 1025px)  { @content; }
+	}
+	@else if $point == 1024 {
+		@media (max-width: 1024px) { @content; }
+	}
+	@else if $point == 990 {
+		@media (max-width: 991px) { @content; }
+	}
+	@else if $point == 960 {
+		@media (max-width: 960px) { @content; }
+	}
+	@else if $point == 800 {
+		@media (max-width: 800px) { @content; }
+	}
+	@else if $point == 768 {
+		@media (max-width: 768px)  { @content; }
+	}
+	@else if $point == 769_min {
+		@media (min-width: 768px)  { @content; }
+	}
+	@else if $point == 767 {
+		@media (max-width: 767px)  { @content; }
+	}
+	@else if $point == 668_min {
+		@media (min-width: 668px)  { @content; }
+	}
+	@else if $point == 667 {
+		@media (max-width: 667px)  { @content; }
+	}
+	@else if $point == 568 {
+		@media (max-width: 568px)  { @content; }
+	}
+	@else if $point == 481_min {
+		@media (min-width: 481px)  { @content; }
+	}
+	@else if $point == 480 {
+		@media (max-width: 480px)  { @content; }
+	}
+	@else if $point == 414 {
+		@media (max-width: 414px)  { @content; }
+	}
+	@else if $point == 375 {
+		@media (max-width: 375px)  { @content; }
+	}
+	@else if $point == 320 {
+		@media (max-width: 320px)  { @content; }
+	}
+	@else if $point == "retina" {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+			only screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi) {
+			@content;
+		}
+	}
+}
+
+// CROSS BROWSER OPACITY
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// CLEAR FIX WORKS IN IE6 up
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@function calculateRem($size) {
+  	$remSize: $size / $fontsize_root;
+  	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+  	font-size: calculateRem($size);
+}
+
+@mixin abs-pos ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+	top: $top;
+  	right: $right;
+  	bottom: $bottom;
+  	left: $left;
+  	position: absolute;
+  	margin: auto;
+}
+
+@mixin line-height($heightValue: 12 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.125 * $heightValue) + rem;
+}
+
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+@keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(0, 0, 1); transform: scale3d(0, 0, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+
+@keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; -webkit-transform: scale3d(0.5, 0.5, 1); transform: scale3d(0.5, 0.5, 1); }
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@mixin em($size, $override: null){
+
+	font-size: $size $override;
+  	font-size: em($size) $override;
+
+}
+
+@mixin lh($size, $override: null){
+
+  	line-height: em($size) $override;
+
+}

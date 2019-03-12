@@ -1,0 +1,11 @@
+_setup/
+asssets/
+connectors/
+core/
+manager/
+modx-2.7.1-pl/
+config.core.php
+ht.access
+index.php
+modx-2.7.1-pl.zip
+css/sass/.sass-cache/

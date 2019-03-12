@@ -1,0 +1,149 @@
+.content-section{
+	.guide-title {
+		max-width: 1300px;
+		margin: 0 auto;
+		text-align: center;
+		h1{
+			font-family: $title-font;
+			font-size: 35px;
+			font-weight: $title-font-style;
+		}
+	}
+	.grid-container{
+		max-width: 960px;
+		margin:0 auto;
+		width: 100%;
+		list-style-type: none;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		.grid-wrapper{
+			width: 32.33333%;
+			background: #f3f3f3;
+   			border-radius: 15px;
+   			padding: 15px 15px 0px 15px;
+   			margin-bottom: 40px;
+  			box-shadow: 9px 6px 10px rgba(234, 234, 234, 0.9);
+			img{
+				width: 100%;
+			}
+			.text-warpper{
+				text-align: center;
+				width: 100%;
+				padding-right: 10px;
+			    line-height: 1.5;
+			    letter-spacing: 0.02em;
+				h2{
+					font-family: $title-font;
+					font-size: 18px;
+					font-weight: $title-font-style;
+				}
+				p{
+					font-family: $title-font;
+					font-size: 11px;
+					font-weight: 100;
+				}
+				.date{
+						font-family: $title-font;
+					font-size: 11px;
+					font-weight: 100;
+
+				}
+				a{
+					color: #000;
+					text-decoration: none;
+					font-family: $subtext;
+					font-weight: 100;
+				}
+			}
+			
+			
+		} 
+		.grid-wrapper:first-child{
+			width: 68.5%;
+			display: flex;
+			justify-content:space-between;
+			.image-wrapper{
+				width: 47%;
+				img{
+					width: 100%;
+				}
+
+			}
+			.text-warpper{
+				width: 47%;
+				text-align: left;
+				padding-right: 10px;
+			    line-height: 1.5;
+			    letter-spacing: 0.02em;
+				h2{
+					font-family: $title-font;
+					font-size: 23px;
+					font-weight: $title-font-style;
+				}
+				.date{
+						font-family: $title-font;
+					font-size: 12px;
+					font-weight: 100;
+
+				}
+				p{
+					margin-top: 30px;
+					font-family: $title-font;
+					font-size: 13px;
+					font-weight: 100;
+				}
+				a{
+					text-align: right;
+					text-decoration: none;
+					color:#000;
+					position: relative;
+					right: -200px;
+					top: 15px;
+					font-family: $subtext;
+					font-weight: 100;
+				}
+			}
+		}
+		.grid-wrapper:nth-child(2){
+			width: 28.5%;
+			.guide.button-default{
+			    top: 12px;
+			    left: 67px;
+			    padding:5px;
+			    font-size: 11px;
+			    margin-bottom: 30px;
+			    font-family: $subtext;
+					font-weight: 100;
+			}
+		}
+	}
+	.pagination-buttons{
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 60px;
+		button{
+			height: 40px;
+			width: 40px;
+			border: none;
+			background: #fff;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+			box-shadow: 2px 0px 3px rgba(221,221,221,0.9);
+			font-size: 16px;
+			font-family: $subtext;
+			font-weight: bold;
+		}
+		.active{
+			background: #c2c2c2;
+
+		}
+	}
+	.image-container-2{
+		background: url("../../img/guide-hero.jpg");
+		background-size: cover;
+		background-position: center;
+		padding-bottom: 30%;
+	}
+}
