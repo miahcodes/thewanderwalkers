@@ -13,9 +13,16 @@ $(window).scroll(function(event) {
 			let $navBg = $('.masthead');
 			if($(window).scrollTop() > 20){
 				$navBg.addClass('active');
+				$('.desktop-logo').addClass('hide');
+				$('.mobile-logo').addClass('show');
+				$('.open').addClass('change');
 			} else {
 				
 				$navBg.removeClass('active');
+				$('.open').removeClass('change');
+				$('.desktop-logo').removeClass('hide');
+				$('.mobile-logo').removeClass('show');
+				
 			}
 			
 		});
